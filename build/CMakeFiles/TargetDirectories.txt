@@ -1,0 +1,3 @@
+/home/mikolaj/projects/software/tietoevry/build/CMakeFiles/main.dir
+/home/mikolaj/projects/software/tietoevry/build/CMakeFiles/edit_cache.dir
+/home/mikolaj/projects/software/tietoevry/build/CMakeFiles/rebuild_cache.dir
