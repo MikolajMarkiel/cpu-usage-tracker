@@ -22,8 +22,3 @@ int delete_cpu_data_array(cpu_data *cpu) {
   return 0;
 }
 
-int main(int argc, char *argv[])
-{
-  // TODO
-  return EXIT_SUCCESS;
-}

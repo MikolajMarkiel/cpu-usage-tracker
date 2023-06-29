@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build",
-  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -g -o CMakeFiles/main.dir/main.c.o -c /home/mikolaj/projects/software/tietoevry/main.c",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -I/home/mikolaj/projects/software/tietoevry/lib/logger -g -o CMakeFiles/main.dir/main.c.o -c /home/mikolaj/projects/software/tietoevry/main.c",
   "file": "/home/mikolaj/projects/software/tietoevry/main.c"
 },
 {

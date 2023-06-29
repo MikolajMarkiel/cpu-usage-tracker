@@ -7,18 +7,18 @@ extern "C" {
 
 typedef struct {
   int id;
-  unsigned long user;
-  unsigned long nice;
-  unsigned long system;
-  unsigned long idle;
-  unsigned long iowait;
-  unsigned long irq;
-  unsigned long softirq;
+  unsigned int user;
+  unsigned int nice;
+  unsigned int system;
+  unsigned int idle;
+  unsigned int iowait;
+  unsigned int irq;
+  unsigned int softirq;
 } cpu_raw_data_t;
 
 cpu_raw_data_t* create_cpu_raw_data(int id);
 int get_raw_data(cpu_raw_data_t* buf);
-int delete_raw_data(cpu_raw_data_t* buf);
+void delete_raw_data(cpu_raw_data_t* buf);
 
 #ifdef __cplusplus
 } /* extern "C" */

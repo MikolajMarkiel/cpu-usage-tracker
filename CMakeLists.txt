@@ -9,7 +9,5 @@ add_subdirectory(lib)
 add_subdirectory(tests)
 
 add_executable(main main.c)
-target_link_libraries(main PUBLIC logger)
-target_link_libraries(main PUBLIC reader)
-target_link_libraries(main PUBLIC analyser)
 target_link_libraries(main PUBLIC printer)
+target_link_libraries(main PUBLIC logger)

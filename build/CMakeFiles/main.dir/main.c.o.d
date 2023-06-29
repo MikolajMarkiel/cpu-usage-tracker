@@ -1,9 +1,9 @@
 CMakeFiles/main.dir/main.c.o: \
  /home/mikolaj/projects/software/tietoevry/main.c \
  /usr/include/stdc-predef.h \
+ /home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.h \
  /home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.h \
  /home/mikolaj/projects/software/tietoevry/lib/cpu_reader/cpu_reader.h \
- /home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.h \
  /home/mikolaj/projects/software/tietoevry/lib/logger/logger.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

@@ -10,6 +10,7 @@ extern "C" {
 typedef struct {
   cpu_raw_data_t **raw;
   int usage;
+  void* user_data;
 } cpu_data;
 
 typedef struct {
