@@ -11,12 +11,12 @@
 },
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/cpu_analyser",
-  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -g -o CMakeFiles/analyser.dir/cpu_analyser.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.c",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -g -o CMakeFiles/analyser.dir/cpu_analyser.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.c",
   "file": "/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.c"
 },
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/cpu_printer",
-  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -g -o CMakeFiles/printer.dir/cpu_printer.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.c",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -g -o CMakeFiles/printer.dir/cpu_printer.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.c",
   "file": "/home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.c"
 },
 {

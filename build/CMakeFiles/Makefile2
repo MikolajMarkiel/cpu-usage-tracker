@@ -993,7 +993,7 @@ lib/logger/CMakeFiles/logger.dir/clean:
 # Target rules for target lib/cpu_analyser/CMakeFiles/analyser.dir
 
 # All Build rule for target.
-lib/cpu_analyser/CMakeFiles/analyser.dir/all:
+lib/cpu_analyser/CMakeFiles/analyser.dir/all: lib/cpu_reader/CMakeFiles/reader.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=1,2 "Built target analyser"
@@ -1001,7 +1001,7 @@ lib/cpu_analyser/CMakeFiles/analyser.dir/all:
 
 # Build rule for subdir invocation for target.
 lib/cpu_analyser/CMakeFiles/analyser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_analyser/CMakeFiles/analyser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 0
 .PHONY : lib/cpu_analyser/CMakeFiles/analyser.dir/rule
@@ -1019,7 +1019,8 @@ lib/cpu_analyser/CMakeFiles/analyser.dir/clean:
 # Target rules for target lib/cpu_printer/CMakeFiles/printer.dir
 
 # All Build rule for target.
-lib/cpu_printer/CMakeFiles/printer.dir/all:
+lib/cpu_printer/CMakeFiles/printer.dir/all: lib/cpu_analyser/CMakeFiles/analyser.dir/all
+lib/cpu_printer/CMakeFiles/printer.dir/all: lib/cpu_reader/CMakeFiles/reader.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=7,8 "Built target printer"
@@ -1027,7 +1028,7 @@ lib/cpu_printer/CMakeFiles/printer.dir/all:
 
 # Build rule for subdir invocation for target.
 lib/cpu_printer/CMakeFiles/printer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_printer/CMakeFiles/printer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 0
 .PHONY : lib/cpu_printer/CMakeFiles/printer.dir/rule

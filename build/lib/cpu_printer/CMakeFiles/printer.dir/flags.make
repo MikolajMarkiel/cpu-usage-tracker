@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer
+C_INCLUDES = -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader
 
 C_FLAGS = -g
 
