@@ -1,1 +1,4 @@
 add_subdirectory(logger)
+add_subdirectory(cpu_analyser)
+add_subdirectory(cpu_printer)
+add_subdirectory(cpu_reader)

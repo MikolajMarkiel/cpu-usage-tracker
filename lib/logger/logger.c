@@ -9,18 +9,18 @@
 
 enum logger_status { log_exit, log_run };
 
-enum logger_status status = log_exit;
+static enum logger_status status = log_exit;
 
-FILE *logfile;
-const char *f_name;
-char *log_buf[LOG_BUFFER];
+static FILE *logfile;
+static const char *f_name;
+static char *log_buf[LOG_BUFFER];
 
-pthread_t logger_thread;
+static pthread_t logger_thread;
 
-sem_t log_full_sem;
-sem_t log_empty_sem;
+static sem_t log_full_sem;
+static sem_t log_empty_sem;
 
-pthread_mutex_t log_buf_mutex;
+static pthread_mutex_t log_buf_mutex;
 
 static int write_to_file(char *msg, const char *mode) {
   if (f_name == NULL) {
@@ -36,9 +36,9 @@ static int write_to_file(char *msg, const char *mode) {
   return 0;
 }
 
-static void *logger(void *arg) {
+static void *logger() {
   static int buf_offset = 0;
-  while (1) { 
+  while (1) {
     sem_wait(&log_full_sem);
     if (status == log_exit) {
       break;
@@ -59,7 +59,7 @@ static void *logger(void *arg) {
 int shutdown_logger(void) {
   status = log_exit;
   sem_post(&log_full_sem);
-  pthread_join(logger_thread, NULL); 
+  pthread_join(logger_thread, NULL);
   pthread_mutex_destroy(&log_buf_mutex);
   sem_destroy(&log_full_sem);
   sem_destroy(&log_empty_sem);
@@ -84,14 +84,16 @@ int log_init(const char *filename) {
   return 0;
 }
 
-int my_log(const char *format, ...) {
+int my_log(char const* format, ...) 
+
+{
   static int buf_offset = 0;
   va_list args_1, args_2;
   char *buf;
-  int len;
+  size_t len;
 
   va_start(args_1, format);
-  len = vsnprintf(NULL, 0, format, args_1);
+  len = (size_t)vsnprintf(NULL, 0, format, args_1);
   va_end(args_1);
   if (len == 0) {
     fprintf(stderr, "log error: empty message\n");
@@ -118,10 +120,10 @@ int my_log(const char *format, ...) {
 }
 
 void test_logger(void) {
-  assert(write_to_file("test", "a") == 1); 
+  assert(write_to_file("test", "a") == 1);
   assert(log_init("test_log.txt") == 0);
-  assert(write_to_file("test", "a") == 0); 
-  for (int i = 0; i< 200; i++){
+  assert(write_to_file("test", "a") == 0);
+  for (int i = 0; i < 200; i++) {
     assert(my_log("test %u", i) == 0);
   }
   assert(shutdown_logger() == 0);

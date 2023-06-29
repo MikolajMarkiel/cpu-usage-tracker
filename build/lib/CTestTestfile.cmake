@@ -5,3 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("logger")
+subdirs("cpu_analyser")
+subdirs("cpu_printer")
+subdirs("cpu_reader")

@@ -1,13 +1,28 @@
 [
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build",
-  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -g -o CMakeFiles/main.dir/main.c.o -c /home/mikolaj/projects/software/tietoevry/main.c",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -g -o CMakeFiles/main.dir/main.c.o -c /home/mikolaj/projects/software/tietoevry/main.c",
   "file": "/home/mikolaj/projects/software/tietoevry/main.c"
 },
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/logger",
   "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -g -o CMakeFiles/logger.dir/logger.c.o -c /home/mikolaj/projects/software/tietoevry/lib/logger/logger.c",
   "file": "/home/mikolaj/projects/software/tietoevry/lib/logger/logger.c"
+},
+{
+  "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/cpu_analyser",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser -g -o CMakeFiles/analyser.dir/cpu_analyser.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.c",
+  "file": "/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/cpu_analyser.c"
+},
+{
+  "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/cpu_printer",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_printer -g -o CMakeFiles/printer.dir/cpu_printer.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.c",
+  "file": "/home/mikolaj/projects/software/tietoevry/lib/cpu_printer/cpu_printer.c"
+},
+{
+  "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/cpu_reader",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/cpu_reader -g -o CMakeFiles/reader.dir/cpu_reader.c.o -c /home/mikolaj/projects/software/tietoevry/lib/cpu_reader/cpu_reader.c",
+  "file": "/home/mikolaj/projects/software/tietoevry/lib/cpu_reader/cpu_reader.c"
 },
 {
   "directory": "/home/mikolaj/projects/software/tietoevry/build/tests",

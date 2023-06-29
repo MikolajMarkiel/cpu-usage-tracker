@@ -517,6 +517,45 @@ logger/fast:
 .PHONY : logger/fast
 
 #=============================================================================
+# Target rules for targets named analyser
+
+# Build rule for target.
+analyser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 analyser
+.PHONY : analyser
+
+# fast build rule for target.
+analyser/fast:
+	$(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/build
+.PHONY : analyser/fast
+
+#=============================================================================
+# Target rules for targets named printer
+
+# Build rule for target.
+printer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 printer
+.PHONY : printer
+
+# fast build rule for target.
+printer/fast:
+	$(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/build
+.PHONY : printer/fast
+
+#=============================================================================
+# Target rules for targets named reader
+
+# Build rule for target.
+reader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reader
+.PHONY : reader
+
+# fast build rule for target.
+reader/fast:
+	$(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/reader.dir/build.make lib/cpu_reader/CMakeFiles/reader.dir/build
+.PHONY : reader/fast
+
+#=============================================================================
 # Target rules for targets named t_logger
 
 # Build rule for target.
@@ -590,8 +629,11 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... analyser"
 	@echo "... logger"
 	@echo "... main"
+	@echo "... printer"
+	@echo "... reader"
 	@echo "... t_logger"
 	@echo "... main.o"
 	@echo "... main.i"

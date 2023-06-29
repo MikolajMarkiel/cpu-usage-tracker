@@ -11,6 +11,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
   "/home/mikolaj/projects/software/tietoevry/lib/CMakeLists.txt"
+  "/home/mikolaj/projects/software/tietoevry/lib/cpu_analyser/CMakeLists.txt"
+  "/home/mikolaj/projects/software/tietoevry/lib/cpu_printer/CMakeLists.txt"
+  "/home/mikolaj/projects/software/tietoevry/lib/cpu_reader/CMakeLists.txt"
   "/home/mikolaj/projects/software/tietoevry/lib/logger/CMakeLists.txt"
   "/home/mikolaj/projects/software/tietoevry/tests/CMakeLists.txt"
   "/usr/share/cmake-3.25/Modules/CMakeCCompiler.cmake.in"
@@ -106,6 +109,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/logger/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/cpu_analyser/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/cpu_printer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/cpu_reader/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -141,5 +147,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ContinuousSubmit.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   "lib/logger/CMakeFiles/logger.dir/DependInfo.cmake"
+  "lib/cpu_analyser/CMakeFiles/analyser.dir/DependInfo.cmake"
+  "lib/cpu_printer/CMakeFiles/printer.dir/DependInfo.cmake"
+  "lib/cpu_reader/CMakeFiles/reader.dir/DependInfo.cmake"
   "tests/CMakeFiles/t_logger.dir/DependInfo.cmake"
   )

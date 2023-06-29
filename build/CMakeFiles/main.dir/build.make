@@ -93,6 +93,9 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/main.c.o
 main: CMakeFiles/main.dir/build.make
 main: lib/logger/liblogger.a
+main: lib/cpu_reader/libreader.a
+main: lib/cpu_analyser/libanalyser.a
+main: lib/cpu_printer/libprinter.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
