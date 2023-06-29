@@ -8,5 +8,10 @@
   "directory": "/home/mikolaj/projects/software/tietoevry/build/lib/logger",
   "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -g -o CMakeFiles/logger.dir/logger.c.o -c /home/mikolaj/projects/software/tietoevry/lib/logger/logger.c",
   "file": "/home/mikolaj/projects/software/tietoevry/lib/logger/logger.c"
+},
+{
+  "directory": "/home/mikolaj/projects/software/tietoevry/build/tests",
+  "command": "/usr/bin/gcc  -I/home/mikolaj/projects/software/tietoevry/lib/logger -g -o CMakeFiles/t_logger.dir/test_logger.c.o -c /home/mikolaj/projects/software/tietoevry/tests/test_logger.c",
+  "file": "/home/mikolaj/projects/software/tietoevry/tests/test_logger.c"
 }
 ]

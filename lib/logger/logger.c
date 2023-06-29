@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <stdarg.h>
@@ -114,4 +115,15 @@ int my_log(const char *format, ...) {
   pthread_mutex_unlock(&log_buf_mutex);
   sem_post(&log_full_sem);
   return 0;
+}
+
+void test_logger(void) {
+  assert(write_to_file("test", "a") == 1); 
+  assert(log_init("test_log.txt") == 0);
+  assert(write_to_file("test", "a") == 0); 
+  for (int i = 0; i< 200; i++){
+    assert(my_log("test %u", i) == 0);
+  }
+  assert(shutdown_logger() == 0);
+  assert(log_init("test_log.txt") == 0);
 }
