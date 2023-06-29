@@ -1,5 +1,8 @@
-cmake_minimum_required (VERSION 3.25.1)
+cmake_minimum_required(VERSION 3.25.1)
 
-project(cpu_usage_tracker)
+project(cpu_usage_tracker VERSION 0.1.0 LANGUAGES C)
 
-add_executable(main src/main.c)
+add_subdirectory(lib)
+
+add_executable(main main.c)
+target_link_libraries(main PUBLIC logger)

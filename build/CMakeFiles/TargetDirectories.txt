@@ -1,3 +1,8 @@
 /home/mikolaj/projects/software/tietoevry/build/CMakeFiles/main.dir
 /home/mikolaj/projects/software/tietoevry/build/CMakeFiles/edit_cache.dir
 /home/mikolaj/projects/software/tietoevry/build/CMakeFiles/rebuild_cache.dir
+/home/mikolaj/projects/software/tietoevry/build/lib/CMakeFiles/edit_cache.dir
+/home/mikolaj/projects/software/tietoevry/build/lib/CMakeFiles/rebuild_cache.dir
+/home/mikolaj/projects/software/tietoevry/build/lib/logger/CMakeFiles/logger.dir
+/home/mikolaj/projects/software/tietoevry/build/lib/logger/CMakeFiles/edit_cache.dir
+/home/mikolaj/projects/software/tietoevry/build/lib/logger/CMakeFiles/rebuild_cache.dir

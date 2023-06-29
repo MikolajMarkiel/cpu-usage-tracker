@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles /home/mikolaj/projects/software/tietoevry/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/mikolaj/projects/software/tietoevry/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles /home/mikolaj/projects/software/tietoevry/build/lib/logger//CMakeFiles/progress.marks
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/logger/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/logger/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/logger/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/logger/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mikolaj/projects/software/tietoevry/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+lib/logger/CMakeFiles/logger.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/logger/CMakeFiles/logger.dir/rule
+.PHONY : lib/logger/CMakeFiles/logger.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named logger
-
-# Build rule for target.
-logger: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logger
+# Convenience name for target.
+logger: lib/logger/CMakeFiles/logger.dir/rule
 .PHONY : logger
 
 # fast build rule for target.
 logger/fast:
-	$(MAKE) $(MAKESILENT) -f lib/logger/CMakeFiles/logger.dir/build.make lib/logger/CMakeFiles/logger.dir/build
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/logger/CMakeFiles/logger.dir/build.make lib/logger/CMakeFiles/logger.dir/build
 .PHONY : logger/fast
 
-main.o: main.c.o
-.PHONY : main.o
+logger.o: logger.c.o
+.PHONY : logger.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
-.PHONY : main.c.o
+logger.c.o:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/logger/CMakeFiles/logger.dir/build.make lib/logger/CMakeFiles/logger.dir/logger.c.o
+.PHONY : logger.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+logger.i: logger.c.i
+.PHONY : logger.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
-.PHONY : main.c.i
+logger.c.i:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/logger/CMakeFiles/logger.dir/build.make lib/logger/CMakeFiles/logger.dir/logger.c.i
+.PHONY : logger.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+logger.s: logger.c.s
+.PHONY : logger.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
-.PHONY : main.c.s
+logger.c.s:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/logger/CMakeFiles/logger.dir/build.make lib/logger/CMakeFiles/logger.dir/logger.c.s
+.PHONY : logger.c.s
 
 # Help Target
 help:
@@ -175,10 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... logger"
-	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... logger.o"
+	@echo "... logger.i"
+	@echo "... logger.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mikolaj/projects/software/tietoevry/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
