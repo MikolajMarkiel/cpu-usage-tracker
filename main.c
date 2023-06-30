@@ -17,6 +17,5 @@ int main() {
   // cpu = create_cpu_raw_data(1);
   // get_raw_data(cpu);
   // delete_raw_data(cpu);
-
   return EXIT_SUCCESS;
 }

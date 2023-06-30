@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/t_logger.dir/test_logger.c.o -o t_logger  ../lib/logger/liblogger.a 
+/usr/bin/gcc  -Wall -Wextra CMakeFiles/t_logger.dir/test_logger.c.o -o t_logger  ../lib/logger/liblogger.a 

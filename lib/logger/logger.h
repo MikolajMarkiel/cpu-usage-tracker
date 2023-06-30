@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-int my_log(const char *format, ...);
+int my_log(char const* format, ...);
 int log_init(const char *filename);
 int shutdown_logger(void);
 void test_logger(void);

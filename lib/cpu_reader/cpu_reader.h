@@ -18,7 +18,7 @@ typedef struct {
 
 cpu_raw_data_t* create_cpu_raw_data(int id);
 int get_raw_data(cpu_raw_data_t* buf);
-void delete_raw_data(cpu_raw_data_t* buf);
+int delete_raw_data(cpu_raw_data_t* buf);
 
 #ifdef __cplusplus
 } /* extern "C" */

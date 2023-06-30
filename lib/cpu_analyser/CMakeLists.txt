@@ -1,4 +1,4 @@
-add_library(analyser STATIC cpu_analyser.c)
-target_link_libraries(analyser PUBLIC reader)
-target_include_directories(analyser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/)
+add_library(cpu_analyser STATIC cpu_analyser.c)
+target_link_libraries(cpu_analyser PUBLIC cpu_reader)
+target_include_directories(cpu_analyser PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/)
 

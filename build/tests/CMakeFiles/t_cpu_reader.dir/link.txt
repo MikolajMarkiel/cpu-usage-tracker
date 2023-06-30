@@ -1,0 +1,1 @@
+/usr/bin/gcc  -Wall -Wextra CMakeFiles/t_cpu_reader.dir/test_cpu_reader.c.o -o t_cpu_reader  ../lib/cpu_reader/libcpu_reader.a 

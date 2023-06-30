@@ -127,25 +127,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/cpu_analyser/CMakeFiles/analyser.dir/rule:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_analyser/CMakeFiles/analyser.dir/rule
-.PHONY : lib/cpu_analyser/CMakeFiles/analyser.dir/rule
+lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/rule
+.PHONY : lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/rule
 
 # Convenience name for target.
-analyser: lib/cpu_analyser/CMakeFiles/analyser.dir/rule
-.PHONY : analyser
+cpu_analyser: lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/rule
+.PHONY : cpu_analyser
 
 # fast build rule for target.
-analyser/fast:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/build
-.PHONY : analyser/fast
+cpu_analyser/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/build.make lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/build
+.PHONY : cpu_analyser/fast
 
 cpu_analyser.o: cpu_analyser.c.o
 .PHONY : cpu_analyser.o
 
 # target to build an object file
 cpu_analyser.c.o:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/cpu_analyser.c.o
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/build.make lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/cpu_analyser.c.o
 .PHONY : cpu_analyser.c.o
 
 cpu_analyser.i: cpu_analyser.c.i
@@ -153,7 +153,7 @@ cpu_analyser.i: cpu_analyser.c.i
 
 # target to preprocess a source file
 cpu_analyser.c.i:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/cpu_analyser.c.i
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/build.make lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/cpu_analyser.c.i
 .PHONY : cpu_analyser.c.i
 
 cpu_analyser.s: cpu_analyser.c.s
@@ -161,7 +161,7 @@ cpu_analyser.s: cpu_analyser.c.s
 
 # target to generate assembly for a file
 cpu_analyser.c.s:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/analyser.dir/build.make lib/cpu_analyser/CMakeFiles/analyser.dir/cpu_analyser.c.s
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/build.make lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/cpu_analyser.c.s
 .PHONY : cpu_analyser.c.s
 
 # Help Target
@@ -173,7 +173,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... analyser"
+	@echo "... cpu_analyser"
 	@echo "... cpu_analyser.o"
 	@echo "... cpu_analyser.i"
 	@echo "... cpu_analyser.s"

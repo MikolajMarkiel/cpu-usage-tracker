@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// TODO - change concept of logger...
+
 #define LOG_BUFFER 20
 
 enum logger_status { log_exit, log_run };
@@ -117,15 +119,4 @@ int my_log(char const* format, ...)
   pthread_mutex_unlock(&log_buf_mutex);
   sem_post(&log_full_sem);
   return 0;
-}
-
-void test_logger(void) {
-  assert(write_to_file("test", "a") == 1);
-  assert(log_init("test_log.txt") == 0);
-  assert(write_to_file("test", "a") == 0);
-  for (int i = 0; i < 200; i++) {
-    assert(my_log("test %u", i) == 0);
-  }
-  assert(shutdown_logger() == 0);
-  assert(log_init("test_log.txt") == 0);
 }

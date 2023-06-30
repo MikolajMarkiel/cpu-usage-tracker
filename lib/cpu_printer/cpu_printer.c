@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int print_cpu_data(cpu_data_array* arr){
-  // TODO
-  return 0;
-}
+// int print_cpu_data(cpu_data_array* arr){
+//   // TODO
+//   return 0;
+// }
 
 

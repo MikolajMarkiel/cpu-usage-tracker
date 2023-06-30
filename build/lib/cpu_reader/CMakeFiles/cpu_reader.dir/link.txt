@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcpu_reader.a CMakeFiles/cpu_reader.dir/cpu_reader.c.o
+/usr/bin/ranlib libcpu_reader.a

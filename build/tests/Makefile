@@ -127,6 +127,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/t_cpu_reader.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_cpu_reader.dir/rule
+.PHONY : tests/CMakeFiles/t_cpu_reader.dir/rule
+
+# Convenience name for target.
+t_cpu_reader: tests/CMakeFiles/t_cpu_reader.dir/rule
+.PHONY : t_cpu_reader
+
+# fast build rule for target.
+t_cpu_reader/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/build
+.PHONY : t_cpu_reader/fast
+
+# Convenience name for target.
 tests/CMakeFiles/t_logger.dir/rule:
 	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_logger.dir/rule
 .PHONY : tests/CMakeFiles/t_logger.dir/rule
@@ -139,6 +153,30 @@ t_logger: tests/CMakeFiles/t_logger.dir/rule
 t_logger/fast:
 	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_logger.dir/build.make tests/CMakeFiles/t_logger.dir/build
 .PHONY : t_logger/fast
+
+test_cpu_reader.o: test_cpu_reader.c.o
+.PHONY : test_cpu_reader.o
+
+# target to build an object file
+test_cpu_reader.c.o:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/test_cpu_reader.c.o
+.PHONY : test_cpu_reader.c.o
+
+test_cpu_reader.i: test_cpu_reader.c.i
+.PHONY : test_cpu_reader.i
+
+# target to preprocess a source file
+test_cpu_reader.c.i:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/test_cpu_reader.c.i
+.PHONY : test_cpu_reader.c.i
+
+test_cpu_reader.s: test_cpu_reader.c.s
+.PHONY : test_cpu_reader.s
+
+# target to generate assembly for a file
+test_cpu_reader.c.s:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/test_cpu_reader.c.s
+.PHONY : test_cpu_reader.c.s
 
 test_logger.o: test_logger.c.o
 .PHONY : test_logger.o
@@ -173,7 +211,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... t_cpu_reader"
 	@echo "... t_logger"
+	@echo "... test_cpu_reader.o"
+	@echo "... test_cpu_reader.i"
+	@echo "... test_cpu_reader.s"
 	@echo "... test_logger.o"
 	@echo "... test_logger.i"
 	@echo "... test_logger.s"

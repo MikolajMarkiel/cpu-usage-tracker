@@ -127,25 +127,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/cpu_reader/CMakeFiles/reader.dir/rule:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_reader/CMakeFiles/reader.dir/rule
-.PHONY : lib/cpu_reader/CMakeFiles/reader.dir/rule
+lib/cpu_reader/CMakeFiles/cpu_reader.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_reader/CMakeFiles/cpu_reader.dir/rule
+.PHONY : lib/cpu_reader/CMakeFiles/cpu_reader.dir/rule
 
 # Convenience name for target.
-reader: lib/cpu_reader/CMakeFiles/reader.dir/rule
-.PHONY : reader
+cpu_reader: lib/cpu_reader/CMakeFiles/cpu_reader.dir/rule
+.PHONY : cpu_reader
 
 # fast build rule for target.
-reader/fast:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/reader.dir/build.make lib/cpu_reader/CMakeFiles/reader.dir/build
-.PHONY : reader/fast
+cpu_reader/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/cpu_reader.dir/build.make lib/cpu_reader/CMakeFiles/cpu_reader.dir/build
+.PHONY : cpu_reader/fast
 
 cpu_reader.o: cpu_reader.c.o
 .PHONY : cpu_reader.o
 
 # target to build an object file
 cpu_reader.c.o:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/reader.dir/build.make lib/cpu_reader/CMakeFiles/reader.dir/cpu_reader.c.o
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/cpu_reader.dir/build.make lib/cpu_reader/CMakeFiles/cpu_reader.dir/cpu_reader.c.o
 .PHONY : cpu_reader.c.o
 
 cpu_reader.i: cpu_reader.c.i
@@ -153,7 +153,7 @@ cpu_reader.i: cpu_reader.c.i
 
 # target to preprocess a source file
 cpu_reader.c.i:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/reader.dir/build.make lib/cpu_reader/CMakeFiles/reader.dir/cpu_reader.c.i
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/cpu_reader.dir/build.make lib/cpu_reader/CMakeFiles/cpu_reader.dir/cpu_reader.c.i
 .PHONY : cpu_reader.c.i
 
 cpu_reader.s: cpu_reader.c.s
@@ -161,7 +161,7 @@ cpu_reader.s: cpu_reader.c.s
 
 # target to generate assembly for a file
 cpu_reader.c.s:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/reader.dir/build.make lib/cpu_reader/CMakeFiles/reader.dir/cpu_reader.c.s
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_reader/CMakeFiles/cpu_reader.dir/build.make lib/cpu_reader/CMakeFiles/cpu_reader.dir/cpu_reader.c.s
 .PHONY : cpu_reader.c.s
 
 # Help Target
@@ -173,7 +173,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... reader"
+	@echo "... cpu_reader"
 	@echo "... cpu_reader.o"
 	@echo "... cpu_reader.i"
 	@echo "... cpu_reader.s"

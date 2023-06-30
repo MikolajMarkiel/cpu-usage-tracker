@@ -147,8 +147,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ContinuousSubmit.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   "lib/logger/CMakeFiles/logger.dir/DependInfo.cmake"
-  "lib/cpu_analyser/CMakeFiles/analyser.dir/DependInfo.cmake"
-  "lib/cpu_printer/CMakeFiles/printer.dir/DependInfo.cmake"
-  "lib/cpu_reader/CMakeFiles/reader.dir/DependInfo.cmake"
+  "lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/DependInfo.cmake"
+  "lib/cpu_printer/CMakeFiles/cpu_printer.dir/DependInfo.cmake"
+  "lib/cpu_reader/CMakeFiles/cpu_reader.dir/DependInfo.cmake"
+  "tests/CMakeFiles/t_cpu_reader.dir/DependInfo.cmake"
   "tests/CMakeFiles/t_logger.dir/DependInfo.cmake"
   )

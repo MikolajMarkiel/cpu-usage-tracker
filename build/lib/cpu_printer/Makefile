@@ -127,25 +127,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-lib/cpu_printer/CMakeFiles/printer.dir/rule:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_printer/CMakeFiles/printer.dir/rule
-.PHONY : lib/cpu_printer/CMakeFiles/printer.dir/rule
+lib/cpu_printer/CMakeFiles/cpu_printer.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/cpu_printer/CMakeFiles/cpu_printer.dir/rule
+.PHONY : lib/cpu_printer/CMakeFiles/cpu_printer.dir/rule
 
 # Convenience name for target.
-printer: lib/cpu_printer/CMakeFiles/printer.dir/rule
-.PHONY : printer
+cpu_printer: lib/cpu_printer/CMakeFiles/cpu_printer.dir/rule
+.PHONY : cpu_printer
 
 # fast build rule for target.
-printer/fast:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/build
-.PHONY : printer/fast
+cpu_printer/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/cpu_printer.dir/build.make lib/cpu_printer/CMakeFiles/cpu_printer.dir/build
+.PHONY : cpu_printer/fast
 
 cpu_printer.o: cpu_printer.c.o
 .PHONY : cpu_printer.o
 
 # target to build an object file
 cpu_printer.c.o:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/cpu_printer.c.o
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/cpu_printer.dir/build.make lib/cpu_printer/CMakeFiles/cpu_printer.dir/cpu_printer.c.o
 .PHONY : cpu_printer.c.o
 
 cpu_printer.i: cpu_printer.c.i
@@ -153,7 +153,7 @@ cpu_printer.i: cpu_printer.c.i
 
 # target to preprocess a source file
 cpu_printer.c.i:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/cpu_printer.c.i
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/cpu_printer.dir/build.make lib/cpu_printer/CMakeFiles/cpu_printer.dir/cpu_printer.c.i
 .PHONY : cpu_printer.c.i
 
 cpu_printer.s: cpu_printer.c.s
@@ -161,7 +161,7 @@ cpu_printer.s: cpu_printer.c.s
 
 # target to generate assembly for a file
 cpu_printer.c.s:
-	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/printer.dir/build.make lib/cpu_printer/CMakeFiles/printer.dir/cpu_printer.c.s
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f lib/cpu_printer/CMakeFiles/cpu_printer.dir/build.make lib/cpu_printer/CMakeFiles/cpu_printer.dir/cpu_printer.c.s
 .PHONY : cpu_printer.c.s
 
 # Help Target
@@ -173,7 +173,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... printer"
+	@echo "... cpu_printer"
 	@echo "... cpu_printer.o"
 	@echo "... cpu_printer.i"
 	@echo "... cpu_printer.s"

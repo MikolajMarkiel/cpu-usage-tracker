@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/main.dir/main.c.o -o main  lib/cpu_printer/libprinter.a lib/logger/liblogger.a lib/cpu_analyser/libanalyser.a lib/cpu_reader/libreader.a 
+/usr/bin/gcc  -Wall -Wextra CMakeFiles/main.dir/main.c.o -o main  lib/cpu_printer/libcpu_printer.a lib/logger/liblogger.a lib/cpu_analyser/libcpu_analyser.a lib/cpu_reader/libcpu_reader.a 
