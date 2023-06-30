@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcpu_analyser.a CMakeFiles/cpu_analyser.dir/cpu_analyser.c.o
-/usr/bin/ranlib libcpu_analyser.a
