@@ -196,6 +196,8 @@ lib/logger/clean: lib/logger/CMakeFiles/logger.dir/clean
 
 # Recursive "all" directory target.
 tests/all: tests/CMakeFiles/t_cpu_reader.dir/all
+tests/all: tests/CMakeFiles/t_cpu_analyser.dir/all
+tests/all: tests/CMakeFiles/t_cpu_printer.dir/all
 tests/all: tests/CMakeFiles/t_logger.dir/all
 .PHONY : tests/all
 
@@ -205,6 +207,8 @@ tests/preinstall:
 
 # Recursive "clean" directory target.
 tests/clean: tests/CMakeFiles/t_cpu_reader.dir/clean
+tests/clean: tests/CMakeFiles/t_cpu_analyser.dir/clean
+tests/clean: tests/CMakeFiles/t_cpu_printer.dir/clean
 tests/clean: tests/CMakeFiles/t_logger.dir/clean
 .PHONY : tests/clean
 
@@ -1077,7 +1081,7 @@ lib/cpu_reader/CMakeFiles/cpu_reader.dir/clean:
 tests/CMakeFiles/t_cpu_reader.dir/all: lib/cpu_reader/CMakeFiles/cpu_reader.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_reader.dir/build.make tests/CMakeFiles/t_cpu_reader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=11,12 "Built target t_cpu_reader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=15,16 "Built target t_cpu_reader"
 .PHONY : tests/CMakeFiles/t_cpu_reader.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1097,13 +1101,68 @@ tests/CMakeFiles/t_cpu_reader.dir/clean:
 .PHONY : tests/CMakeFiles/t_cpu_reader.dir/clean
 
 #=============================================================================
+# Target rules for target tests/CMakeFiles/t_cpu_analyser.dir
+
+# All Build rule for target.
+tests/CMakeFiles/t_cpu_analyser.dir/all: lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/all
+tests/CMakeFiles/t_cpu_analyser.dir/all: lib/cpu_reader/CMakeFiles/cpu_reader.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=11,12 "Built target t_cpu_analyser"
+.PHONY : tests/CMakeFiles/t_cpu_analyser.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/t_cpu_analyser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_cpu_analyser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/t_cpu_analyser.dir/rule
+
+# Convenience name for target.
+t_cpu_analyser: tests/CMakeFiles/t_cpu_analyser.dir/rule
+.PHONY : t_cpu_analyser
+
+# clean rule for target.
+tests/CMakeFiles/t_cpu_analyser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/clean
+.PHONY : tests/CMakeFiles/t_cpu_analyser.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/t_cpu_printer.dir
+
+# All Build rule for target.
+tests/CMakeFiles/t_cpu_printer.dir/all: lib/cpu_analyser/CMakeFiles/cpu_analyser.dir/all
+tests/CMakeFiles/t_cpu_printer.dir/all: lib/cpu_printer/CMakeFiles/cpu_printer.dir/all
+tests/CMakeFiles/t_cpu_printer.dir/all: lib/cpu_reader/CMakeFiles/cpu_reader.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=13,14 "Built target t_cpu_printer"
+.PHONY : tests/CMakeFiles/t_cpu_printer.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/t_cpu_printer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_cpu_printer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mikolaj/projects/software/tietoevry/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/t_cpu_printer.dir/rule
+
+# Convenience name for target.
+t_cpu_printer: tests/CMakeFiles/t_cpu_printer.dir/rule
+.PHONY : t_cpu_printer
+
+# clean rule for target.
+tests/CMakeFiles/t_cpu_printer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/clean
+.PHONY : tests/CMakeFiles/t_cpu_printer.dir/clean
+
+#=============================================================================
 # Target rules for target tests/CMakeFiles/t_logger.dir
 
 # All Build rule for target.
 tests/CMakeFiles/t_logger.dir/all: lib/logger/CMakeFiles/logger.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_logger.dir/build.make tests/CMakeFiles/t_logger.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_logger.dir/build.make tests/CMakeFiles/t_logger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=13,14 "Built target t_logger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mikolaj/projects/software/tietoevry/build/CMakeFiles --progress-num=17,18 "Built target t_logger"
 .PHONY : tests/CMakeFiles/t_logger.dir/all
 
 # Build rule for subdir invocation for target.

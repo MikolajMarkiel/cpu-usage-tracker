@@ -7,7 +7,7 @@ extern "C" {
 
 #include "cpu_analyser.h"
 
-int print_cpu_data(cpu_data_array* arr);
+int print_cpu_data(cpu_data_array_t* arr);
 
 
 #ifdef __cplusplus

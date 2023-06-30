@@ -1,3 +1,0 @@
-test_cpu_reader 1 0.00125031
-test_logger 1 0.00517486
----

@@ -8,20 +8,20 @@ extern "C" {
 #include "cpu_reader.h"
 
 typedef struct {
-  cpu_raw_data_t **raw;
+  cpu_raw_data_t *raw_curr;
+  cpu_raw_data_t *raw_prev;
   int usage;
   void* user_data;
-} cpu_data;
+} cpu_data_t;
 
 typedef struct {
-  cpu_data *cpu;
+  cpu_data_t **cpu;
   int quantity;
-} cpu_data_array;
+} cpu_data_array_t;
 
-cpu_data_array *create_cpu_data_array();
-int count_cpu(int *buf);
-int analyze_data(cpu_data *cpu);
-int delete_cpu_data_array(cpu_data *cpu);
+int analyze_data(cpu_data_t *cpu);
+int delete_cpu_data_array(cpu_data_array_t *cpu);
+int cpu_analyser_init(cpu_data_array_t *arr);
 
 #ifdef __cplusplus
 } /* extern "C" */

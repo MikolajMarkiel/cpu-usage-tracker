@@ -141,6 +141,34 @@ t_cpu_reader/fast:
 .PHONY : t_cpu_reader/fast
 
 # Convenience name for target.
+tests/CMakeFiles/t_cpu_analyser.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_cpu_analyser.dir/rule
+.PHONY : tests/CMakeFiles/t_cpu_analyser.dir/rule
+
+# Convenience name for target.
+t_cpu_analyser: tests/CMakeFiles/t_cpu_analyser.dir/rule
+.PHONY : t_cpu_analyser
+
+# fast build rule for target.
+t_cpu_analyser/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/build
+.PHONY : t_cpu_analyser/fast
+
+# Convenience name for target.
+tests/CMakeFiles/t_cpu_printer.dir/rule:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_cpu_printer.dir/rule
+.PHONY : tests/CMakeFiles/t_cpu_printer.dir/rule
+
+# Convenience name for target.
+t_cpu_printer: tests/CMakeFiles/t_cpu_printer.dir/rule
+.PHONY : t_cpu_printer
+
+# fast build rule for target.
+t_cpu_printer/fast:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/build
+.PHONY : t_cpu_printer/fast
+
+# Convenience name for target.
 tests/CMakeFiles/t_logger.dir/rule:
 	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/t_logger.dir/rule
 .PHONY : tests/CMakeFiles/t_logger.dir/rule
@@ -153,6 +181,54 @@ t_logger: tests/CMakeFiles/t_logger.dir/rule
 t_logger/fast:
 	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_logger.dir/build.make tests/CMakeFiles/t_logger.dir/build
 .PHONY : t_logger/fast
+
+test_cpu_analyser.o: test_cpu_analyser.c.o
+.PHONY : test_cpu_analyser.o
+
+# target to build an object file
+test_cpu_analyser.c.o:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/test_cpu_analyser.c.o
+.PHONY : test_cpu_analyser.c.o
+
+test_cpu_analyser.i: test_cpu_analyser.c.i
+.PHONY : test_cpu_analyser.i
+
+# target to preprocess a source file
+test_cpu_analyser.c.i:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/test_cpu_analyser.c.i
+.PHONY : test_cpu_analyser.c.i
+
+test_cpu_analyser.s: test_cpu_analyser.c.s
+.PHONY : test_cpu_analyser.s
+
+# target to generate assembly for a file
+test_cpu_analyser.c.s:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/test_cpu_analyser.c.s
+.PHONY : test_cpu_analyser.c.s
+
+test_cpu_printer.o: test_cpu_printer.c.o
+.PHONY : test_cpu_printer.o
+
+# target to build an object file
+test_cpu_printer.c.o:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/test_cpu_printer.c.o
+.PHONY : test_cpu_printer.c.o
+
+test_cpu_printer.i: test_cpu_printer.c.i
+.PHONY : test_cpu_printer.i
+
+# target to preprocess a source file
+test_cpu_printer.c.i:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/test_cpu_printer.c.i
+.PHONY : test_cpu_printer.c.i
+
+test_cpu_printer.s: test_cpu_printer.c.s
+.PHONY : test_cpu_printer.s
+
+# target to generate assembly for a file
+test_cpu_printer.c.s:
+	cd /home/mikolaj/projects/software/tietoevry/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/test_cpu_printer.c.s
+.PHONY : test_cpu_printer.c.s
 
 test_cpu_reader.o: test_cpu_reader.c.o
 .PHONY : test_cpu_reader.o
@@ -211,8 +287,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... t_cpu_analyser"
+	@echo "... t_cpu_printer"
 	@echo "... t_cpu_reader"
 	@echo "... t_logger"
+	@echo "... test_cpu_analyser.o"
+	@echo "... test_cpu_analyser.i"
+	@echo "... test_cpu_analyser.s"
+	@echo "... test_cpu_printer.o"
+	@echo "... test_cpu_printer.i"
+	@echo "... test_cpu_printer.s"
 	@echo "... test_cpu_reader.o"
 	@echo "... test_cpu_reader.i"
 	@echo "... test_cpu_reader.s"

@@ -569,6 +569,32 @@ t_cpu_reader/fast:
 .PHONY : t_cpu_reader/fast
 
 #=============================================================================
+# Target rules for targets named t_cpu_analyser
+
+# Build rule for target.
+t_cpu_analyser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 t_cpu_analyser
+.PHONY : t_cpu_analyser
+
+# fast build rule for target.
+t_cpu_analyser/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_analyser.dir/build.make tests/CMakeFiles/t_cpu_analyser.dir/build
+.PHONY : t_cpu_analyser/fast
+
+#=============================================================================
+# Target rules for targets named t_cpu_printer
+
+# Build rule for target.
+t_cpu_printer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 t_cpu_printer
+.PHONY : t_cpu_printer
+
+# fast build rule for target.
+t_cpu_printer/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/t_cpu_printer.dir/build.make tests/CMakeFiles/t_cpu_printer.dir/build
+.PHONY : t_cpu_printer/fast
+
+#=============================================================================
 # Target rules for targets named t_logger
 
 # Build rule for target.
@@ -647,6 +673,8 @@ help:
 	@echo "... cpu_reader"
 	@echo "... logger"
 	@echo "... main"
+	@echo "... t_cpu_analyser"
+	@echo "... t_cpu_printer"
 	@echo "... t_cpu_reader"
 	@echo "... t_logger"
 	@echo "... main.o"

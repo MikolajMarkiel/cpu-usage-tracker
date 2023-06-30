@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/mikolaj/projects/software/tietoevry/lib/logger
 
-C_FLAGS =  -Wall -Wextra -std=c99
+C_FLAGS =  -Wall -Wextra -g -std=c99
 

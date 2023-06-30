@@ -50,6 +50,8 @@
 /home/mikolaj/projects/software/tietoevry/build/lib/cpu_reader/CMakeFiles/edit_cache.dir
 /home/mikolaj/projects/software/tietoevry/build/lib/cpu_reader/CMakeFiles/rebuild_cache.dir
 /home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/t_cpu_reader.dir
+/home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/t_cpu_analyser.dir
+/home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/t_cpu_printer.dir
 /home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/t_logger.dir
 /home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/test.dir
 /home/mikolaj/projects/software/tietoevry/build/tests/CMakeFiles/edit_cache.dir
