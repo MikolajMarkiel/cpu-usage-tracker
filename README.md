@@ -6,11 +6,11 @@ It is based on informations gathered from /proc/stat and get_nprocs() function f
 
 ## TODO list
  - [x] CMake configuration
- - [x] logger module + test
+ - [?] logger module + test
  - [x] reader module + test
  - [x] analyser module + test
  - [x] printer module + test
  - [x] main application
  - [x] SIGTERM
- - [ ] watchdog
- - [ ] final test and fix issues
+ - [x] watchdog
+ - [x] final test and fix issues
