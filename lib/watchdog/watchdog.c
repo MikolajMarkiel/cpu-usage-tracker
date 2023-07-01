@@ -12,6 +12,8 @@ int wd_test_init(wd_test_t* test, char* msg){
   static wd_test_t *prev = NULL;
  if(prev == NULL){
    first = test;
+ } else {
+   prev->next = test;
  } 
  test->prev = prev;
  test->next = NULL;
@@ -35,6 +37,7 @@ int wd_check_test(wd_test_t *test){
   }
   if(test->val == 1){
     my_log("watchdog error: %s", test->message);
+    printf("\nwatchdog error: %s\n", test->message);
     return 2;
   }
   test->val = 1;
@@ -48,6 +51,7 @@ int wd_check_all(){
     if(wd_check_test(c_test)){
       err = 1;
     }
+    c_test = c_test->next;
   }
   return err;
 }

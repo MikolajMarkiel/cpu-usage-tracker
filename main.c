@@ -2,6 +2,7 @@
 #include "cpu_printer.h"
 #include "cpu_reader.h"
 #include "logger.h"
+#include "watchdog.h"
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>
@@ -9,32 +10,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "watchdog.h"
 
 #define LOG_FILENAME "log.txt"
 
-static pthread_t t[3];
-static sem_t sem_get_data, sem_analyse, sem_print;
+static pthread_t t[4];
+static sem_t sem_reader, sem_analyse, sem_print;
 static cpu_data_array_t cpu_arr;
+
+static wd_test_t wd_reader;
+static wd_test_t wd_analyzer;
+static wd_test_t wd_printer;
 
 static enum {
   run,
   term,
 } process_state;
 
-static void handle_sigterm() {
-  printf("\nterminating...");
-  fflush(stdout);
+static void shutdown_app() {
   process_state = term;
   sem_post(&sem_print);
   sem_post(&sem_analyse);
-  sem_post(&sem_get_data);
+  sem_post(&sem_reader);
   return;
+}
+
+static void handle_sigterm() {
+  printf("\nterminating...\n");
+  fflush(stdout);
+  shutdown_app();
 }
 
 static void *reader() {
   while (1) {
-    sem_wait(&sem_get_data);
+    wd_feed(&wd_reader);
+    sem_wait(&sem_reader);
     if (process_state == term) {
       break;
     }
@@ -49,6 +58,7 @@ static void *reader() {
 static void *analyser() {
   while (1) {
     for (int cnt = 0; cnt < cpu_arr.quantity; cnt++) {
+      wd_feed(&wd_analyzer);
       sem_wait(&sem_analyse);
       if (process_state == term) {
         pthread_exit(0);
@@ -62,8 +72,9 @@ static void *analyser() {
 
 static void *printer() {
   while (1) {
+    wd_feed(&wd_printer);
     sleep(1);
-    sem_post(&sem_get_data);
+    sem_post(&sem_reader);
     sem_wait(&sem_print);
     if (process_state == term) {
       break;
@@ -73,35 +84,63 @@ static void *printer() {
   pthread_exit(0);
 }
 
+static void *watchdog() {
+  static int err;
+  while (1) {
+    sleep(2);
+    err = wd_check_all();
+    if (err) {
+      my_log("ERROR: watchdog reset");
+      printf("ERROR: watchdog reset\n");
+      shutdown_app();
+    }
+    if (process_state == term) {
+      pthread_exit(0);
+    }
+  }
+  pthread_exit(0);
+}
+
 int main() {
   signal(SIGTERM, &handle_sigterm);
-
   log_init(LOG_FILENAME);
+
+  wd_test_init(&wd_reader, "reader");
+  wd_test_init(&wd_analyzer, "analyzer");
+  wd_test_init(&wd_printer, "printer");
+
   if (cpu_analyser_init(&cpu_arr)) {
     return 1;
   }
-  if (sem_init(&sem_get_data, 0, 0) || //
-      sem_init(&sem_analyse, 0, 0) ||  //
+
+  if (sem_init(&sem_reader, 0, 0) ||  //
+      sem_init(&sem_analyse, 0, 0) || //
       sem_init(&sem_print, 0, 0)) {
     return 2;
   }
 
   if (pthread_create(&t[0], NULL, reader, NULL) ||
       pthread_create(&t[1], NULL, analyser, NULL) ||
-      pthread_create(&t[2], NULL, printer, NULL)) {
+      pthread_create(&t[2], NULL, printer, NULL) ||
+      pthread_create(&t[3], NULL, watchdog, NULL)) {
     return 3;
   }
-  if (pthread_join(t[0], NULL) || //
-      pthread_join(t[1], NULL) || //
-      pthread_join(t[2], NULL)) {
-    return 4;
+
+  for (size_t i = 0; i < sizeof(t) / sizeof(pthread_t); i++) {
+    if (pthread_join(t[i], NULL)) {
+      return 4;
+    }
   }
-  sem_destroy(&sem_get_data);
+
+  sem_destroy(&sem_reader);
   sem_destroy(&sem_analyse);
   sem_destroy(&sem_print);
 
   delete_cpu_data_array(&cpu_arr);
+
   shutdown_logger();
-  printf("\nend of program\n");
+
+  printf("end of program\n");
+
   return EXIT_SUCCESS;
 }
