@@ -5,6 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 
+
 static cpu_data_array_t arr;
 
 int main() {

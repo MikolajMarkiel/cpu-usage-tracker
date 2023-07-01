@@ -5,6 +5,11 @@
 extern "C" {
 #endif
 
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wdeclaration-after-statement"
+// https://github.com/llvm/llvm-project/issues/53438
+#endif
+
 typedef struct {
   int id;
   unsigned int user;

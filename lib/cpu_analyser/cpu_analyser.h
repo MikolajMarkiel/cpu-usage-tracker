@@ -5,6 +5,13 @@
 extern "C" {
 #endif
 
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wpadded"
+// https://stackoverflow.com/questions/20184259/what-does-the-padding-class-tester-with-4-bytes-warning-mean
+#pragma clang diagnostic ignored "-Wdeclaration-after-statement"
+// https://github.com/llvm/llvm-project/issues/53438
+#endif //__clang__
+
 #include "cpu_reader.h"
 
 typedef struct {

@@ -61,9 +61,12 @@ static void *analyser() {
       wd_feed(&wd_analyzer);
       sem_wait(&sem_analyse);
       if (process_state == term) {
-        pthread_exit(0);
+        break;
       }
       analyze_data(cpu_arr.cpu[cnt]);
+    }
+    if (process_state == term) {
+      break;
     }
     sem_post(&sem_print);
   }
@@ -95,7 +98,7 @@ static void *watchdog() {
       shutdown_app();
     }
     if (process_state == term) {
-      pthread_exit(0);
+      break;
     }
   }
   pthread_exit(0);

@@ -3,7 +3,8 @@
 #include "watchdog.h"
 #include "logger.h"
 
-wd_test_t *first;
+//
+static wd_test_t *first;
 
 int wd_test_init(wd_test_t* test, char* msg){
   if (test == NULL){
@@ -44,7 +45,7 @@ int wd_check_test(wd_test_t *test){
   return 0;
 }
 
-int wd_check_all(){
+int wd_check_all(void){
   int err = 0;
   wd_test_t *c_test = first;
   while(c_test != NULL){

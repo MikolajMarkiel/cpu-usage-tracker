@@ -8,6 +8,7 @@
 
 // TODO - change concept of logger...
 
+//
 #define LOG_BUFFER 20
 
 enum logger_status { log_exit, log_run };
