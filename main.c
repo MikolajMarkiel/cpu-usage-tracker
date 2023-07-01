@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "watchdog.h"
 
 #define LOG_FILENAME "log.txt"
 
@@ -73,9 +74,6 @@ static void *printer() {
 }
 
 int main() {
-  // struct sigaction sig;
-  // sig.sa_handler = &handle_sigterm;
-  // sigaction(SIGTERM, &sig, NULL);
   signal(SIGTERM, &handle_sigterm);
 
   log_init(LOG_FILENAME);
