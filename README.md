@@ -11,6 +11,6 @@ It is based on informations gathered from /proc/stat and get_nprocs() function f
  - [x] analyser module + test
  - [x] printer module + test
  - [x] main application
- - [ ] SIGTERM
+ - [x] SIGTERM
  - [ ] watchdog
  - [ ] final test and fix issues
