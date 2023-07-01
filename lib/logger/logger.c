@@ -1,3 +1,4 @@
+#include "logger.h"
 #include <assert.h>
 #include <pthread.h>
 #include <semaphore.h>
@@ -86,7 +87,7 @@ int log_init(const char *filename) {
   return 0;
 }
 
-int my_log(char const* format, ...) 
+int my_log(char const *format, ...)
 
 {
   static int buf_offset = 0;

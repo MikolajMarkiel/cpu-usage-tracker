@@ -1,4 +1,5 @@
 #include "cpu_reader.h"
+#include "logger.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,6 +10,7 @@ static int skip_lines(FILE *fp, int num) {
     ch = (char)getc(fp);
     num = (ch == '\n') ? (num - 1) : num;
     if (ch == EOF) {
+      my_log("skip lines error: end of file");
       return 1;
     }
   } while (num);
@@ -31,13 +33,16 @@ int get_raw_data(cpu_raw_data_t *buf) {
   int err = 0;
   char cpu_num[6];
   if (buf == NULL) {
+    my_log("get raw data error: null buffer");
     return 1;
   }
-  if (buf->id < 0){
+  if (buf->id < 0) {
+    my_log("get raw data error: wrong id");
     return 2;
   }
   FILE *fp = fopen("/proc/stat", "r");
   if (fp == NULL) {
+    my_log("get raw data error: unable to open /proc/stat");
     err = 3;
   } else {
     if (skip_lines(fp, buf->id + 1) == 1) {
@@ -45,6 +50,7 @@ int get_raw_data(cpu_raw_data_t *buf) {
     } else {
       fscanf(fp, "%s ", cpu_num);
       if (cmp_cpu_id(cpu_num, buf->id) != 0) {
+        my_log("get raw data error: cpus id not equal");
         err = 5;
       } else {
         fscanf(fp, "%u %u %u %u %u %u %u", &(buf->user), &(buf->nice),
@@ -59,6 +65,7 @@ int get_raw_data(cpu_raw_data_t *buf) {
 
 int delete_raw_data(cpu_raw_data_t *buf) {
   if (buf == NULL) {
+    my_log("delete raw data error: null buffer");
     return 1;
   }
   free(buf);

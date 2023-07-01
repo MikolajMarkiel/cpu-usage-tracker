@@ -10,8 +10,7 @@ extern "C" {
 typedef struct {
   cpu_raw_data_t *raw_curr;
   cpu_raw_data_t *raw_prev;
-  int usage;
-  void* user_data;
+  unsigned int usage;
 } cpu_data_t;
 
 typedef struct {

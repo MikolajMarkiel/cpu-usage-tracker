@@ -8,7 +8,7 @@ extern "C" {
 int my_log(char const* format, ...);
 int log_init(const char *filename);
 int shutdown_logger(void);
-void test_logger(void);
+// void test_logger(void);
 
 #ifdef __cplusplus
 } /* extern "C" */

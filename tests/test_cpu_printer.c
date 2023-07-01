@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-cpu_data_array_t arr;
+static cpu_data_array_t arr;
 
 int main() {
   assert(print_cpu_data(NULL) == 1);
