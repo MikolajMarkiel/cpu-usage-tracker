@@ -3,7 +3,6 @@
 #include "watchdog.h"
 #include "logger.h"
 
-//
 static wd_test_t *first;
 
 int wd_test_init(wd_test_t* test, char* msg){

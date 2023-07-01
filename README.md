@@ -6,7 +6,7 @@ It is based on informations gathered from /proc/stat and get_nprocs() function f
 
 ## TODO list
  - [x] CMake configuration
- - [?] logger module + test
+ - [x] logger module + test
  - [x] reader module + test
  - [x] analyser module + test
  - [x] printer module + test

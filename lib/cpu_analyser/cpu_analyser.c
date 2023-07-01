@@ -11,7 +11,7 @@ static unsigned int get_total(cpu_raw_data_t *buf) {
          buf->irq + buf->softirq;
 }
 
-static unsigned int get_idle(cpu_raw_data_t *buf) { //
+static unsigned int get_idle(cpu_raw_data_t *buf) {
   return buf->idle + buf->iowait;
 }
 
@@ -60,7 +60,8 @@ int cpu_analyser_init(cpu_data_array_t *arr) {
     my_log("cpu analyser init error: quantity = 0");
     return 3;
   }
-  arr->cpu = (cpu_data_t **)malloc((size_t)arr->quantity * sizeof(cpu_data_t *));
+  arr->cpu =
+      (cpu_data_t **)malloc((size_t)arr->quantity * sizeof(cpu_data_t *));
   for (int i = 0; i < arr->quantity; i++) {
     arr->cpu[i] = create_cpu_data(i);
   }

@@ -13,8 +13,10 @@
 
 #define LOG_FILENAME "log.txt"
 
-static pthread_t t[4];
+static pthread_t t[5];
 static sem_t sem_reader, sem_analyse, sem_print;
+static sem_t sem_log_full, sem_log_empty;
+static pthread_mutex_t log_mutex;
 static cpu_data_array_t cpu_arr;
 
 static wd_test_t wd_reader;
@@ -31,6 +33,7 @@ static void shutdown_app() {
   sem_post(&sem_print);
   sem_post(&sem_analyse);
   sem_post(&sem_reader);
+  sem_post(&sem_log_full);
   return;
 }
 
@@ -104,9 +107,23 @@ static void *watchdog() {
   pthread_exit(0);
 }
 
+static void *logger() {
+  while (1) {
+    sem_wait(&sem_log_full);
+    if (process_state == term) {
+      while (!flush_message()) {
+      }
+      break;
+    }
+    flush_message();
+    sem_post(&sem_log_empty);
+  }
+  return NULL;
+}
+
 int main() {
   signal(SIGTERM, &handle_sigterm);
-  log_init(LOG_FILENAME);
+  log_init(&log_mutex, &sem_log_full, &sem_log_empty, LOG_FILENAME);
 
   wd_test_init(&wd_reader, "reader");
   wd_test_init(&wd_analyzer, "analyzer");
@@ -116,8 +133,8 @@ int main() {
     return 1;
   }
 
-  if (sem_init(&sem_reader, 0, 0) ||  //
-      sem_init(&sem_analyse, 0, 0) || //
+  if (sem_init(&sem_reader, 0, 0) ||
+      sem_init(&sem_analyse, 0, 0) ||
       sem_init(&sem_print, 0, 0)) {
     return 2;
   }
@@ -125,7 +142,8 @@ int main() {
   if (pthread_create(&t[0], NULL, reader, NULL) ||
       pthread_create(&t[1], NULL, analyser, NULL) ||
       pthread_create(&t[2], NULL, printer, NULL) ||
-      pthread_create(&t[3], NULL, watchdog, NULL)) {
+      pthread_create(&t[3], NULL, watchdog, NULL) ||
+      pthread_create(&t[4], NULL, logger, NULL)) {
     return 3;
   }
 

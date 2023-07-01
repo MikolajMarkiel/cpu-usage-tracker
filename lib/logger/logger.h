@@ -10,10 +10,13 @@ extern "C" {
 // https://stackoverflow.com/questions/36120717/correcting-format-string-is-not-a-string-literal-warning
 #endif //__clang__
 
+#include <semaphore.h>
+#include <pthread.h>
+
 int my_log(char const* format, ...);
-int log_init(const char *filename);
+int log_init(pthread_mutex_t *log_mutex,  sem_t * full, sem_t* empty, const char *filename);
+int flush_message(void);
 int shutdown_logger(void);
-// void test_logger(void);
 
 #ifdef __cplusplus
 } /* extern "C" */

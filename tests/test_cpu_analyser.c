@@ -6,13 +6,9 @@
 #include <unistd.h>
 #include "logger.h"
 
-
-#define LOG_FILENAME "log_test.txt"
-
 static cpu_data_array_t arr;
 
 int main() {
-  log_init(LOG_FILENAME);
   assert(cpu_analyser_init(NULL) == 1);
   assert(cpu_analyser_init(&arr) == 0);
   for (int j = 0; j < 2; j++) {

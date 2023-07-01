@@ -7,12 +7,9 @@
 #include <unistd.h>
 #include "logger.h"
 
-#define LOG_FILENAME "log_test.txt"
-
 static cpu_data_array_t arr;
 
 int main() {
-  log_init(LOG_FILENAME);
   assert(print_cpu_data(NULL) == 1);
   cpu_analyser_init(&arr);
   for (int j = 0; j < 2; j++) {
